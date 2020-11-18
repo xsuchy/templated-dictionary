@@ -2,10 +2,7 @@
 # vim:expandtab:autoindent:tabstop=4:shiftwidth=4:filetype=python:textwidth=0:
 
 from collections.abc import MutableMapping
-import locale
 import jinja2
-
-encoding = locale.getpreferredencoding()
 
 
 # pylint: disable=no-member,unsupported-assignment-operation
