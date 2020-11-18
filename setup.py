@@ -11,7 +11,7 @@ setuptools.setup(
     url="https://github.com/xsuchy/templated-dictionary",
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: GPLv2+",
+        "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
         "Operating System :: OS Independent",
     ],
     license='GPLv2+',
