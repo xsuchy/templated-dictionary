@@ -5,7 +5,7 @@ setuptools.setup(
     version="1.0",
     author="Miroslav Suchý",
     author_email="msuchy@redhat.com",
-    description="Dictinary with Jinja2 expansion",
+    description="Dictionary with Jinja2 expansion",
     long_description="""Dictionary where __getitem__() is run through Jinja2 template.""",
     long_description_content_type="text/markdown",
     url="https://github.com/xsuchy/templated-dictionary",
