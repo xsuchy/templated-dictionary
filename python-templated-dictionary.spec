@@ -26,11 +26,13 @@ BuildArch: noarch
 %if %{with python2}
 BuildRequires: python2-devel
 BuildRequires: python-setuptools
+Requires:      python2-jinja2
 %endif
 
 %if %{with python3}
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
+Requires:      python3-jinja2
 %endif
 
 %global _description\

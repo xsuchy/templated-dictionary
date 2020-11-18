@@ -18,4 +18,7 @@ setuptools.setup(
     packages=['templated-dictionary'],
     include_package_data=True,
     zip_safe=False,
+    install_requires = [
+        'jinja2',
+    ]
 )
