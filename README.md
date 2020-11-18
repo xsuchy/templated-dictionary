@@ -49,6 +49,15 @@ This module provides dictionary where every item is evaluated as a Jinja2 expres
 
 ```
 
+## Exceptions
+
+The class `TemplatedDictionary` is based on [`collections.abc.MutableMapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableMapping). Beside its exceptions it can return `ValueError` when recursion is too deep. Default is set to 5 and can be changed using:
+
+```
+>>> td = TemplatedDictionary()
+>>> td['jinja_max_recursion'] = 10
+```
+
 ## Sources
 
 The upstream is https://github.com/xsuchy/templated-dictionary
