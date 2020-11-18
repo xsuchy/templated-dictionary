@@ -15,7 +15,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     license='GPLv2+',
-    packages=['templated-dictionary'],
+    packages=['templated_dictionary'],
     include_package_data=True,
     zip_safe=False,
     install_requires = [
