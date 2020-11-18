@@ -9,7 +9,6 @@ setuptools.setup(
     long_description="""Dictionary where __getitem__() is run through Jinja2 template.""",
     long_description_content_type="text/markdown",
     url="https://github.com/xsuchy/templated-dictionary",
-    packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GPLv2+",
