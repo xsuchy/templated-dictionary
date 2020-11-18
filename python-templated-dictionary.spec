@@ -9,7 +9,7 @@
 %endif
 
 Name:       python-%{srcname}
-Version:    1.1
+Version:    1.0
 Release:    1%{?dist}
 Summary:    Dictionary with Jinja2 expansion
 
@@ -96,5 +96,5 @@ version=%version %py2_install
 
 
 %changelog
-* Wed Nov 18 2020 Miroslav Suchý <msuchy@redhat.com> 1.1-1
+* Wed Nov 18 2020 Miroslav Suchý <msuchy@redhat.com> 1.0-1
 - new package
