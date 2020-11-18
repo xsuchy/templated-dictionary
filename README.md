@@ -2,6 +2,13 @@
 
 This module provides dictionary where every item is evaluated as a Jinja2 expression.
 
+
+.. image:: https://badge.fury.io/py/templated-dictionary.svg
+        :target: https://pypi.org/project/templated-dictionary/
+
+.. image:: https://img.shields.io/pypi/l/templated-dictionary
+        :target: https://opensource.org/licenses/
+
 ## Usage
 
 ```
