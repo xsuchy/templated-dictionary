@@ -2,8 +2,8 @@
 
 This module provides dictionary where every item is evaluated as a Jinja2 expression.
 
-![PyPI version](https://badge.fury.io/py/templated-dictionary.svg)
-![PyPI - License](https://img.shields.io/pypi/l/templated-dictionary)
+[![PyPI version](https://badge.fury.io/py/templated-dictionary.svg)](https://pypi.org/project/templated-dictionary/)
+[![PyPI - License](https://img.shields.io/pypi/l/templated-dictionary)](https://opensource.org/licenses/)
 
 ## Usage
 
