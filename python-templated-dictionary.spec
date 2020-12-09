@@ -1,4 +1,5 @@
 %global srcname templated-dictionary
+%global python3_pkgversion 3
 
 %if 0%{?rhel} == 7
 %global python3_pkgversion 36
@@ -31,7 +32,7 @@ Dictionary where __getitem__() is run through Jinja2 template.
 
 %package -n python3-%{srcname}
 Summary: %{summary}
-%{?python_provide:%python_provide python3-%{srcname}}
+%{?py_provides:%py_provides python3-%{srcname}}
 %description -n python3-%{srcname} %_description
 
 
@@ -48,8 +49,8 @@ version=%version %py3_install
 
 %files -n python3-%{srcname}
 %license LICENSE
-%{python3_sitelib}/*
-
+%{python3_sitelib}/templated_dictionary-*.egg-info/
+%{python3_sitelib}/templated_dictionary/
 
 
 %changelog
