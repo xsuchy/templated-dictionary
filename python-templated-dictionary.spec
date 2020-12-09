@@ -6,7 +6,7 @@
 %endif
 
 Name:       python-%{srcname}
-Version:    1.0
+Version:    1.1
 Release:    1%{?dist}
 Summary:    Dictionary with Jinja2 expansion
 
@@ -54,5 +54,9 @@ version=%version %py3_install
 
 
 %changelog
+* Wed Dec 09 2020 Miroslav Suchý <msuchy@redhat.com> 1.1-1
+- require python3- variants and more specifis files section
+- remove python2 support
+
 * Wed Nov 18 2020 Miroslav Suchý <msuchy@redhat.com> 1.0-1
 - new package
