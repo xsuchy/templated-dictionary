@@ -5,6 +5,10 @@ This module provides dictionary where every item is evaluated as a Jinja2 expres
 [![PyPI version](https://badge.fury.io/py/templated-dictionary.svg)](https://pypi.org/project/templated-dictionary/)
 [![PyPI - License](https://img.shields.io/pypi/l/templated-dictionary)](https://opensource.org/licenses/)
 
+## Packaging status
+
+![templated-dictionary versions](https://repology.org/badge/vertical-allrepos/python:templated-dictionary.svg?exclude_unsupported=1&header=python:templated-dictionary)
+
 ## Usage
 
 ```
