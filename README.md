@@ -9,6 +9,14 @@ This module provides dictionary where every item is evaluated as a Jinja2 expres
 
 ![templated-dictionary versions](https://repology.org/badge/vertical-allrepos/python:templated-dictionary.svg?exclude_unsupported=1&header=python:templated-dictionary)
 
+Ubuntu 20.04 LTS (Focal Fossa), Uubuntu 22.04 LTS (Jammy Jellyfish)
+
+https://launchpad.net/~andykimpe/+archive/ubuntu/mock
+
+Debian 11 Bullseye Stable
+
+https://software.opensuse.org/download.html?project=home%3Aandykimpe%3Adebian-buster&package=python3-templated-dictionary(https://software.opensuse.org/download.html?project=home%3Aandykimpe%3Adebian-buster&package=python3-templated-dictionary)
+
 ## Usage
 
 ```
