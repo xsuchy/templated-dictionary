@@ -131,3 +131,19 @@ This project is sponsored by [Red Hat](https://www.redhat.com/). [Buy](https://w
 ## License
 
 GPLv2+
+
+
+## Report a bug
+
+For Report a bug or Problem to the original project or rpm packages and pip packages use
+
+Github Issues
+
+https://github.com/xsuchy/templated-dictionary/issues
+
+For Report a bug or Problem to the Debian/Ubuntu Package use online
+
+Launchpad Bugzilla
+
+https://bugs.launchpad.net/ubuntu/+source/python3-templated-dictionary/+filebug
+
