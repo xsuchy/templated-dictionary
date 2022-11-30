@@ -6,7 +6,7 @@
 %endif
 
 Name:       python-%{srcname}
-Version:    1.1
+Version:    1.2
 Release:    1%{?dist}
 Summary:    Dictionary with Jinja2 expansion
 
@@ -54,6 +54,9 @@ version=%version %py3_install
 
 
 %changelog
+* Wed Nov 30 2022 Miroslav Suchý <msuchy@redhat.com> 1.2-1
+- use spdx license
+
 * Fri Jul 22 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1.1-7
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
 
