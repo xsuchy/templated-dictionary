@@ -9,6 +9,10 @@ This module provides dictionary where every item is evaluated as a Jinja2 expres
 
 ![templated-dictionary versions](https://repology.org/badge/vertical-allrepos/python:templated-dictionary.svg?exclude_unsupported=1&header=python:templated-dictionary)
 
+[Ubuntu 20.04 LTS (Focal Fossa), Ubuntu 22.04 LTS (Jammy Jellyfish)](https://launchpad.net/~andykimpe/+archive/ubuntu/mock)
+
+[Debian 11 Bullseye Stable](https://software.opensuse.org/download.html?project=home%3Aandykimpe%3Adebian-buster&package=python3-templated-dictionary)
+
 ## Usage
 
 ```
@@ -127,3 +131,19 @@ This project is sponsored by [Red Hat](https://www.redhat.com/). [Buy](https://w
 ## License
 
 GPLv2+
+
+
+## Report a bug
+
+For Report a bug or Problem to the original project or rpm packages and pip packages use
+
+Github Issues
+
+https://github.com/xsuchy/templated-dictionary/issues
+
+For Report a bug or Problem to the Debian/Ubuntu Package use online
+
+Launchpad Bugzilla
+
+https://bugs.launchpad.net/ubuntu/+source/python3-templated-dictionary/+filebug
+

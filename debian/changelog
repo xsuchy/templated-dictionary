@@ -1,0 +1,13 @@
+python3-templated-dictionary (1.1-1) unstable; urgency=medium
+
+  * require python3- variants and more specifis files section
+  * remove python2 support
+
+ -- Miroslav Suchý <msuchy@redhat.com>  Wed, 09 Dec 2000 17:00:00 +0000
+
+python3-templated-dictionary (1.0-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Miroslav Suchý <msuchy@redhat.com>  Wed, 18 Nov 2020 17:00:00 +0000
+ 
