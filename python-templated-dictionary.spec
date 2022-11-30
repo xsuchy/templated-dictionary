@@ -10,7 +10,7 @@ Version:    1.1
 Release:    1%{?dist}
 Summary:    Dictionary with Jinja2 expansion
 
-License:    GPLv2+
+License:    GPL-2.0-or-later
 URL:        https://github.com/xsuchy/templated-dictionary
 
 # Source is created by:
