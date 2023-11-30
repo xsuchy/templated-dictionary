@@ -2,7 +2,7 @@
 # vim:expandtab:autoindent:tabstop=4:shiftwidth=4:filetype=python:textwidth=0:
 
 from collections.abc import MutableMapping
-import jinja2
+from jinja2 import sandbox
 
 
 # pylint: disable=no-member,unsupported-assignment-operation
@@ -18,6 +18,8 @@ class TemplatedDictionary(MutableMapping):
         'aliased_to' config option is returned.
         '''
         self.__dict__.update(*args, **kwargs)
+
+        self.sandbox = sandbox.SandboxedEnvironment(keep_trailing_newline=True)
 
         self._aliases = {}
         if alias_spec:
@@ -80,8 +82,7 @@ class TemplatedDictionary(MutableMapping):
         orig = last = value
         max_recursion = self.__dict__.get('jinja_max_recursion', 5)
         for _ in range(max_recursion):
-            template = jinja2.Template(value, keep_trailing_newline=True)
-            value = _to_native(template.render(self.__dict__))
+            value = _to_native(self.sandbox.from_string(value).render(self.__dict__, func=lambda:None))
             if value == last:
                 return value
             last = value
