@@ -4,6 +4,7 @@
 from collections.abc import MutableMapping
 from jinja2 import sandbox
 
+SANDBOX = sandbox.SandboxedEnvironment(keep_trailing_newline=True)
 
 # pylint: disable=no-member,unsupported-assignment-operation
 class TemplatedDictionary(MutableMapping):
@@ -18,8 +19,6 @@ class TemplatedDictionary(MutableMapping):
         'aliased_to' config option is returned.
         '''
         self.__dict__.update(*args, **kwargs)
-
-        self.sandbox = sandbox.SandboxedEnvironment(keep_trailing_newline=True)
 
         self._aliases = {}
         if alias_spec:
@@ -82,7 +81,7 @@ class TemplatedDictionary(MutableMapping):
         orig = last = value
         max_recursion = self.__dict__.get('jinja_max_recursion', 5)
         for _ in range(max_recursion):
-            value = _to_native(self.sandbox.from_string(value).render(self.__dict__, func=lambda:None))
+            value = _to_native(SANDBOX.from_string(value).render(self.__dict__, func=lambda:None))
             if value == last:
                 return value
             last = value
