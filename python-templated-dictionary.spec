@@ -6,7 +6,7 @@
 %endif
 
 Name:       python-%{srcname}
-Version:    1.2
+Version:    1.4
 Release:    1%{?dist}
 Summary:    Dictionary with Jinja2 expansion
 
@@ -54,6 +54,14 @@ version=%version %py3_install
 
 
 %changelog
+* Tue Jan 16 2024 Pavel Raiskup <praiskup@redhat.com>
+- make the TemplatedDictionary objects picklable
+- use a sandboxed jinja2 environment, fixes CVE-2023-6395
+
+* Tue Jan 16 2024 Pavel Raiskup <praiskup@redhat.com>
+- make the TemplatedDictionary objects picklable
+- Use a sandboxed jinja2 environment, CVE-2023-6395
+
 * Wed Nov 30 2022 Miroslav Suchý <msuchy@redhat.com> 1.2-1
 - use spdx license
 
