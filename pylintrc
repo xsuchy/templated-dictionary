@@ -1,14 +1,21 @@
-# mock pylint configuration
+# templated-dictionary pylint config (inherited from mock)
 
-[MASTER]
+[MAIN]
 
 # Pickle collected data for later comparisons.
 persistent=no
 
 [MESSAGES CONTROL]
 
-# Disable the message(s) with the given id(s).
-disable=I0011,C0302,C0111,R0801,R0902,R0904,R0912,R0913,R0914,R0915,R0921,R0922,W0142,W0403,W0603,C1001,W0121,useless-else-on-loop,bad-whitespace,unpacking-non-sequence,superfluous-parens,cyclic-import,no-else-return,len-as-condition,useless-object-inheritance,too-many-boolean-expressions
+# Reasoning for wide warning ignore
+# ---------------------------------
+# import-error
+#     This is here to silence Pylint in CI where we do not have all the
+#     build/runtime dependencies installed.
+# cyclic-import
+#     Seems like cyclic-import is just a style check which is not going to be
+#     fixed: https://github.com/PyCQA/pylint/issues/6983
+disable=import-error,cyclic-import
 
 # list of disabled messages:
 #I0011: 62: Locally disabling R0201
@@ -89,9 +96,6 @@ good-names=i,j,k,ex,Run,_
 # Bad variable names which should always be refused, separated by a comma
 bad-names=foo,bar,baz,toto,tutu,tata
 
-# List of builtins function names that should not be used, separated by a comma
-bad-functions=apply,input
-
 
 [DESIGN]
 
@@ -105,7 +109,7 @@ max-locals=20
 max-returns=6
 
 # Maximum number of branch for function / method body
-max-branchs=20
+max-branches=20
 
 # Maximum number of statements in function / method body
 max-statements=50
@@ -121,9 +125,6 @@ min-public-methods=1
 
 # Maximum number of public methods for a class (see R0904).
 max-public-methods=20
-
-
-[CLASSES]
 
 
 [FORMAT]
