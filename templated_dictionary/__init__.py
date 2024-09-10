@@ -2,6 +2,8 @@
 # vim:expandtab:autoindent:tabstop=4:shiftwidth=4:filetype=python:textwidth=0:
 
 from collections.abc import MutableMapping
+from copy import deepcopy
+
 from jinja2 import sandbox
 
 SANDBOX = sandbox.SandboxedEnvironment(keep_trailing_newline=True)
@@ -57,7 +59,10 @@ class TemplatedDictionary(MutableMapping):
                                                     self.__dict__)
 
     def copy(self):
-        return TemplatedDictionary(self.__dict__)
+        new_object = TemplatedDictionary(self.__dict__)
+        # pylint: disable=protected-access
+        new_object._aliases = deepcopy(self._aliases)
+        return new_object
 
     def __render_value(self, value):
         if isinstance(value, str):
