@@ -1,0 +1,38 @@
+# See the documentation for more information:
+# https://packit.dev/docs/configuration/
+
+---
+require:
+  label:
+    absent:
+      - no-ci-builds
+
+actions:
+  create-archive:
+    - bash -c "tito build --tgz --test -o ."
+    - bash -c "ls -1t ./*.tar.gz | head -n 1"
+  get-current-version:
+    - bash -c "grep ^Version python-templated-dictionary.spec | awk '{ print $2 }'"
+
+upstream_tag_template: python-templated-dictionary-{version}-1
+
+srpm_build_deps:
+  - tito
+  - git
+
+jobs:
+  - &copr
+    job: copr_build
+    trigger: pull_request
+    targets:
+      - fedora-all
+      - epel-8-x86_64
+      - epel-9-x86_64
+      - epel-10-x86_64
+
+  - <<: *copr
+    trigger: commit
+    metadata:
+      owner: "@mock"
+      project: "mock"
+      branch: main
