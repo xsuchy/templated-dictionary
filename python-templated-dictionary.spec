@@ -6,7 +6,7 @@
 %endif
 
 Name:       python-%{srcname}
-Version:    1.4
+Version:    1.5
 Release:    1%{?dist}
 Summary:    Dictionary with Jinja2 expansion
 
@@ -54,6 +54,9 @@ version=%version %py3_install
 
 
 %changelog
+* Tue Sep 17 2024 Pavel Raiskup <praiskup@redhat.com> 1.5-1
+- The dictionary.copy() method should copy aliases
+
 * Tue Jan 16 2024 Pavel Raiskup <praiskup@redhat.com>
 - make the TemplatedDictionary objects picklable
 - use a sandboxed jinja2 environment, fixes CVE-2023-6395
